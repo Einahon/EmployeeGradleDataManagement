@@ -1,4 +1,7 @@
 package com.inahon.EmployeeGradleDataManagement.repository;
 
-public interface EmployeeRepository {
+import com.inahon.EmployeeGradleDataManagement.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 }
