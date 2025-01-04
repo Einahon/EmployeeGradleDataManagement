@@ -18,9 +18,10 @@ public class EmployeeController {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
     @PostMapping("/employees")
 
-    public Employee saveEmployee(@Valid @RequestBody Employee employee) {
+    public String saveEmployee(@Valid @RequestBody Employee employee) {
         LOGGER.info("Logger for saveEmployee of EmployeeController");
-        return employeeService.saveEmployee(employee);
+        return "My controller works";
+       // return employeeService.saveEmployee(employee);
     }
 
 }
